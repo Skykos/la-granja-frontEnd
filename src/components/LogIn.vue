@@ -71,11 +71,12 @@ import gql from "graphql-tag";
 
 .formulario{
     position: absolute;
+    margin: auto;
     top: 50%;
-    right: 33%;
+    right: 37%;
     transform: translate(-25%,-25%);
-    background: rgb(251, 255, 251);
-    padding: 80px 70px;
+    background: rgb(152, 192, 152);
+    padding: 50px 60px;
     border-radius: 10px
 
 }
@@ -89,6 +90,7 @@ import gql from "graphql-tag";
 
 .formulario h3{
     text-align: center;
+    position:relative;
 }
 .formulario button{
     width: 220px;

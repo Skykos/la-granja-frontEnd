@@ -6,7 +6,7 @@
                 <form id="myform2" v-on:submit.prevent="processSignUp">
                     <div class="formFlex">
                         <div class="div-izq" >
-                            <input v-model="credentials.username" name="username" class="form-control" type="text" placeholder="USUARIO">
+                            <input v-model="credentials.username" name="username" class="form-control" type="text" placeholder="Usuario">
                             <input v-model="credentials.first_name" name="name" class="form-control" type="text" placeholder="Nombre">
                             <input v-model="credentials.last_name" name="lastname" class="form-control" type="text" placeholder="Apellido">
 
@@ -98,11 +98,12 @@ export default{
 .formularioSignup{
     position: absolute;
     top: 60%;
-    right: 13%;
+    right: 18%;
     transform: translate(-50%,-50%);
-    background: rgb(251, 255, 251);
-    padding: 80px 70px;
-    border-radius: 10px
+    background: rgb(152, 192, 152);
+    padding: 60px 50px;
+    border-radius: 10px;
+    margin:auto;
 
 }
 .formulario input,button,select{
