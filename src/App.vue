@@ -9,7 +9,13 @@
 
         <button v-if="!isAuth"  v-on:click="loadSignUp" class="btn btn-info">Signup</button>
 
+        
+        
+      <div>
+        <button v-if="isAuth"  v-on:click="loadSignUp" class="btn btn-light">Productos</button>
         <button v-if="isAuth"  v-on:click="signOut" class="btn btn-info">Cerrar sesion</button>
+        <p v-if="username"> Bienvenid@: <b>{{username}}</b></p>
+      </div>
       </div>
     </div>
     <div>
@@ -23,11 +29,13 @@ export default {
   name: "App",
   data: function () {
     return{
-      isAuth:false
+      isAuth:false,
+      username:""
     }
   },
   methods: {
     verifyAuth(){
+      this.username = localStorage.getItem("username")|| null;
       this.isAuth = localStorage.getItem("isAuth") || false;
       if(this.isAuth){
         console.log("Pagina de inicio")
@@ -51,6 +59,7 @@ export default {
     signOut(){
       this.loadLogIn();
       this.isAuth=false
+      this.username = null
       localStorage.clear();
     }
   },
@@ -90,6 +99,9 @@ export default {
 }
 .buttons-footer button{
   margin: 0;
+}
+.buttons-footer p{
+  margin:0;
 }
 
 body {
